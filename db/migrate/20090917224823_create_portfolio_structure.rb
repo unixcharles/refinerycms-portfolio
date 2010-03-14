@@ -26,7 +26,7 @@ class CreatePortfolioStructure < ActiveRecord::Migration
 			page.parts.create(:title => default_page_part, :body => nil)
 		end
 		
-		RefinerySetting[:image_thumbnails] = RefinerySetting.find_or_set(:image_thumbnails, {}).merge!({:portfolio_thumb => 'c96x96', :portfolio => '600x512'})
+		RefinerySetting[:image_thumbnails] = RefinerySetting.find_or_set(:image_thumbnails, {}).merge({:portfolio_thumb => 'c96x96', :portfolio => '600x512'})
   end
 
   def self.down
